@@ -25,7 +25,7 @@ function buatKode($tabel, $inisial){
 	$panjang	= mysqli_field_len($struktur,0);
 
  	$qry	= mysqli_query($koneksidb,"SELECT MAX(".$field.") FROM ".$tabel);
- 	$row	= mysqli_fetch_array($qry); 
+ 	$row	= mysqli_fetch_array($qry);
  	if ($row[0]=="") {
  		$angka=0;
 	}
@@ -34,10 +34,10 @@ function buatKode($tabel, $inisial){
  	}
 	$today=date("Ymd");
  	$angka++;
- 	$angka	=strval($angka); 
+ 	$angka	=strval($angka);
  	$tmp	="";
  	for($i=1; $i<=($panjang-strlen($inisial)-strlen($angka)); $i++) {
-		$tmp=$tmp."0";	
+		$tmp=$tmp."0";
 	}
  	return $inisial.$tmp.$angka;
 }
@@ -49,7 +49,7 @@ function buatKode2($tabel, $inisial){
 	$panjang	= mysqli_field_len($struktur,1);
 
  	$qry	= mysqli_query($koneksidb,"SELECT MAX(".$field.") FROM ".$tabel);
- 	$row	= mysqli_fetch_array($qry); 
+ 	$row	= mysqli_fetch_array($qry);
  	if ($row[0]=="") {
  		$angka=0;
 	}
@@ -58,10 +58,10 @@ function buatKode2($tabel, $inisial){
  	}
 	$today=date("Ymd");
  	$angka++;
- 	$angka	=strval($angka); 
+ 	$angka	=strval($angka);
  	$tmp	="";
  	for($i=1; $i<=($panjang-strlen($inisial)-strlen($angka)); $i++) {
-		$tmp=$tmp."0";	
+		$tmp=$tmp."0";
 	}
  	return $inisial.$tmp.$angka;
 }
@@ -73,7 +73,7 @@ function buatKode3($tabel, $inisial){
 	$panjang	= mysqli_field_len($struktur,2);
 
  	$qry	= mysqli_query($koneksidb,"SELECT MAX(".$field.") FROM ".$tabel);
- 	$row	= mysqli_fetch_array($qry); 
+ 	$row	= mysqli_fetch_array($qry);
  	if ($row[0]=="") {
  		$angka=0;
 	}
@@ -82,10 +82,10 @@ function buatKode3($tabel, $inisial){
  	}
 	$today=date("Ymd");
  	$angka++;
- 	$angka	=strval($angka); 
+ 	$angka	=strval($angka);
  	$tmp	="";
  	for($i=1; $i<=($panjang-strlen($inisial)-strlen($angka)); $i++) {
-		$tmp=$tmp."0";	
+		$tmp=$tmp."0";
 	}
  	return $inisial.$tmp.$angka;
 }
@@ -109,9 +109,9 @@ function IndonesiaTgl($tanggal){
 
 # Fungsi untuk membalik tanggal dari format English (Y-m-d) -> Indo (d-m-Y)
 function Indonesia2Tgl($tanggal){
-	$namaBln = array("01" => "Januari", "02" => "Februari", "03" => "Maret", "04" => "April", "05" => "Mei", "06" => "Juni", 
+	$namaBln = array("01" => "Januari", "02" => "Februari", "03" => "Maret", "04" => "April", "05" => "Mei", "06" => "Juni",
 					 "07" => "Juli", "08" => "Agustus", "09" => "September", "10" => "Oktober", "11" => "November", "12" => "Desember");
-					 
+
 	$tgl=substr($tanggal,8,2);
 	$bln=substr($tanggal,5,2);
 	$thn=substr($tanggal,0,4);
@@ -122,7 +122,7 @@ function Indonesia2Tgl($tanggal){
 function hitungHari($myDate1, $myDate2){
         $myDate1 = strtotime($myDate1);
         $myDate2 = strtotime($myDate2);
- 
+
         return ($myDate2 - $myDate1)/ (24 *3600);
 }
 
@@ -135,7 +135,7 @@ function format_angka($angka) {
 # Fungsi untuk format tanggal, dipakai plugins Callendar
 function form_tanggal($nama,$value=''){
 	echo" <input type='text' name='$nama' id='$nama' size='11' maxlength='20' value='$value'/>&nbsp;
-	<img src='images/calendar-add-icon.png' align='top' style='cursor:pointer; margin-top:7px;' alt='kalender'onclick=\"displayCalendar(document.getElementById('$nama'),'dd-mm-yyyy',this)\"/>			
+	<img src='images/calendar-add-icon.png' align='top' style='cursor:pointer; margin-top:7px;' alt='kalender'onclick=\"displayCalendar(document.getElementById('$nama'),'dd-mm-yyyy',this)\"/>
 	";
 }
 function tampil_bulan ($x) {
@@ -143,6 +143,21 @@ function tampil_bulan ($x) {
              5=>'Mei',6=>'Juni',7=>'Juli',8=>'Agustus',
              9=>'September',10=>'Oktober',11=>'November',12=>'Desember');
     return $bulan[$x];
+}
+
+function numberToRomanRepresentation($number) {
+    $map = array('M' => 1000, 'CM' => 900, 'D' => 500, 'CD' => 400, 'C' => 100, 'XC' => 90, 'L' => 50, 'XL' => 40, 'X' => 10, 'IX' => 9, 'V' => 5, 'IV' => 4, 'I' => 1);
+    $returnValue = '';
+    while ($number > 0) {
+        foreach ($map as $roman => $int) {
+            if($number >= $int) {
+                $number -= $int;
+                $returnValue .= $roman;
+                break;
+            }
+        }
+    }
+    return $returnValue;
 }
 
 function angkaTerbilang($x){

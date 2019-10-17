@@ -6,7 +6,7 @@ if($_GET) {
 	if(isset($_POST['btnSave'])){
 		$pesanError = array();
 		if (trim($_POST['txt1'])=="") {
-			$pesanError[] = "Data <b>".$field1."</b> tidak boleh kosong !";		
+			$pesanError[] = "Data <b>".$field1."</b> tidak boleh kosong !";
 		}
 		$txt0= $_POST['txt0'];
 		$txt1= $_POST['txt1'];
@@ -15,30 +15,30 @@ if($_GET) {
 		// $txt4= $_POST['txt4'];
 		$txt5= $_POST['txt5'];
 		// $txt6= $_POST['txt6'];
-		
+
 		$cekSql="SELECT * FROM ".$tableName." WHERE ".$field1."='$txt1' AND ".$field5."='$txt5'";
-		$cekQry=mysqli_query($koneksidb, $cekSql) or die ("Eror Query".mysqli_error()); 
+		$cekQry=mysqli_query($koneksidb, $cekSql) or die ("Eror Query".mysqli_error());
 		if(mysqli_num_rows($cekQry)>=1){
 			$t5 = tampil_bulan($txt5);
 			$pesanError[] = "Maaf, ".$isian5." <b> $t5 </b> sudah ada, ganti dengan yang lain";
-		}		
+		}
 
 		if (count($pesanError)>=1 ){
             echo "<div class='mssgBox'>";
 			echo "<img src='images/attention.png'> <br><hr>";
 				$noPesan=0;
-				foreach ($pesanError as $indeks=>$pesan_tampil) { 
+				foreach ($pesanError as $indeks=>$pesan_tampil) {
 				$noPesan++;
-					echo "&nbsp;&nbsp; $noPesan. $pesan_tampil<br>";	
-				} 
-			echo "</div> <br>"; 
+					echo "&nbsp;&nbsp; $noPesan. $pesan_tampil<br>";
+				}
+			echo "</div> <br>";
 		}
 		else {
-			
+
 			$tmpSql ="SELECT tjawaban_temp.id_kuis,sum(nilai) AS bobot, sum(nilai)/ COUNT(tjawaban_temp.id_kuis) AS unsur,
-			tkuis.jawaban_a, tkuis.jawaban_b, tkuis.jawaban_c, tkuis.jawaban_d,taspek.id_aspek,taspek.nama_aspek 
-			FROM tjawaban_temp LEFT JOIN tkuis ON tkuis.id_kuis=tjawaban_temp.id_kuis 
-			LEFT JOIN taspek ON taspek.id_aspek=tkuis.id_aspek 
+			tkuis.jawaban_a, tkuis.jawaban_b, tkuis.jawaban_c, tkuis.jawaban_d,taspek.id_aspek,taspek.nama_aspek
+			FROM tjawaban_temp LEFT JOIN tkuis ON tkuis.id_kuis=tjawaban_temp.id_kuis
+			LEFT JOIN taspek ON taspek.id_aspek=tkuis.id_aspek
 			WHERE tahun='$txt1' AND bulan='$txt5' GROUP BY tjawaban_temp.id_kuis";
 				$tmpQry = mysqli_query($koneksidb,$tmpSql) or die ("Gagal Query Tmp".mysqli_error($koneksidb));
 				$jml =	mysqli_fetch_row($tmpQry);
@@ -47,34 +47,34 @@ if($_GET) {
 				}
 				else {
 				// while ($tmpRow = mysqli_fetch_array($tmpQry)) {
-				
-					
+
+
 					// $data1 = $tmpRow['id_kuis'];
 					// $data2 = $tmpRow['bobot'];
-					// $data3 = $tmpRow['unsur']; 
+					// $data3 = $tmpRow['unsur'];
 			// if($tmpRow['unsur']>='3.5'){$hasil=$tmpRow['jawaban_d'];}
 			// elseif($tmpRow['unsur']>='2.5'){$hasil=$tmpRow['jawaban_c'];}
 			// elseif($tmpRow['unsur']>='1.5'){$hasil=$tmpRow['jawaban_b'];}
-			// else{$hasil=$tmpRow['jawaban_a'];} 
+			// else{$hasil=$tmpRow['jawaban_a'];}
 					// // Masukkan semua barang yang udah diisi ke tabel pembelian detail
-					// $itemSql = "INSERT INTO tunsur SET 
+					// $itemSql = "INSERT INTO tunsur SET
 											// id_aspek='$data1',
-											// id_kuesioner='$txt0', 
-											// bobot='$data2', 
-											// nilai='$data3', 
+											// id_kuesioner='$txt0',
+											// bobot='$data2',
+											// nilai='$data3',
 											// hasil_ukur='$hasil' ";
 		  			// mysqli_query($koneksidb, $itemSql) or die ("Gagal Query tunsur  ".mysqli_error());
 					// // $x++;
 					// // }
 					$insertSql = "INSERT INTO tjawaban_group(id_kuis,id_aspek,nama_aspek,bobot,unsur,jawaban_a,jawaban_b,jawaban_c,jawaban_d,id_kuesioner) SELECT tjawaban_temp.id_kuis,taspek.id_aspek,taspek.nama_aspek,sum(nilai) AS bobot, sum(nilai)/ COUNT(tjawaban_temp.id_kuis) AS unsur,
-					tkuis.jawaban_a, tkuis.jawaban_b, tkuis.jawaban_c, tkuis.jawaban_d, '$txt0' 
-					FROM tjawaban_temp LEFT JOIN tkuis ON tkuis.id_kuis=tjawaban_temp.id_kuis 
-					LEFT JOIN taspek ON taspek.id_aspek=tkuis.id_aspek 
+					tkuis.jawaban_a, tkuis.jawaban_b, tkuis.jawaban_c, tkuis.jawaban_d, '$txt0'
+					FROM tjawaban_temp LEFT JOIN tkuis ON tkuis.id_kuis=tjawaban_temp.id_kuis
+					LEFT JOIN taspek ON taspek.id_aspek=tkuis.id_aspek
 					WHERE tahun='$txt1' AND bulan='$txt5' GROUP BY tjawaban_temp.id_kuis";
 					$insertQry = mysqli_query($koneksidb,$insertSql) or die ("Gagal tambah Tmp".mysqli_error($koneksidb));
 				}
-		
-			
+
+
 			$pageSql2 = "SELECT sum(nilai)/ COUNT(id_kuis) AS total FROM  tjawaban_temp WHERE tahun='$txt1' AND bulan='$txt5'";
 			$totQry	  = mysqli_query($koneksidb, $pageSql2) or die ("error paging: ".mysql_error());
 			$totData  =  mysqli_fetch_array($totQry);
@@ -84,7 +84,7 @@ if($_GET) {
 			if($totData['total']>='3.25'){$tothasil='Sangat Baik';}
 			elseif($totData['total']>='2.5'){$tothasil='Baik';}
 			elseif($totData['total']>='1.75'){$tothasil='Tidak Baik';}
-			else{$tothasil='Sangat Tidak Baik';} 
+			else{$tothasil='Sangat Tidak Baik';}
 			 $kodeBaru	= buatKode($tableName, $huruftgl);
 			$mySql	= "INSERT INTO ".$tableName." (".$field0.",".$field1.",".$field2.",".$field3.",".$field4.",".$field5." ,".$field6." ) VALUES ('$txt0','$txt1','$txt2','$ikm','$tothasil','$txt5','$date' )";
 			$myQry	= mysqli_query($koneksidb, $mySql) or die ("Gagal query".mysql_error());
@@ -118,14 +118,14 @@ if($_GET) {
       <td width="24%"><b>Kode Kuesioner</b></td>
       <td width="2%"><b>:</b></td>
       <td width="74%"><input name="txt0" class="span20" type="text" value="<?php echo $data0; ?>" size="60" maxlength="200" readonly/>
-	 
+
 	  </td>
     </tr><tr>
       <td width="24%"><b><?php echo $isian1; ?></b></td>
       <td width="2%"><b>:</b></td>
       <td width="74%">
 	 <select name="txt1" class="span20" >
-		 
+
 		<?php
 		$mySql2 = "SELECT tahun FROM tjawaban group by tahun ";
 		$myQry = mysqli_query($koneksidb, $mySql2) or die ("Gagal Query absen ".mysql_error());
@@ -133,7 +133,7 @@ if($_GET) {
 			if ($data1 == $kolomData1['tahun']) {
 				$cek = "selected";
 			} else { $cek=""; }
-			
+
 			echo "<option value='$kolomData1[tahun]' $cek> $kolomData1[tahun] </option>";
 		}
 		$mySql ="";
@@ -146,7 +146,7 @@ if($_GET) {
       <td width="2%"><b>:</b></td>
       <td width="74%">
 	 <select name="txt5" class="span20" >
-		 
+
 		<?php
 		$mySql2 = "SELECT bulan FROM tjawaban group by bulan ";
 		$myQry = mysqli_query($koneksidb, $mySql2) or die ("Gagal Query absen ".mysql_error());
@@ -155,7 +155,7 @@ if($_GET) {
 			if ($data5 == $kolomData1['bulan']) {
 				$cek = "selected";
 			} else { $cek=""; }
-			
+
 			echo "<option value='$kolomData1[bulan]' $cek> $oka </option>";
 		}
 		$mySql ="";
@@ -163,9 +163,9 @@ if($_GET) {
 		</select>
 	  </td>
     </tr>
-       
-	
-	
+
+
+
     <tr>
       <td>&nbsp;</td>
       <td>&nbsp;</td>
@@ -176,8 +176,8 @@ if($_GET) {
 	</table>
 						</fieldset>
 			</form>
- 
+
   </td>
-  
-  </tr> 
+
+  </tr>
 </table>

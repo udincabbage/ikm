@@ -6,7 +6,7 @@ if($_GET) {
 	if(isset($_POST['btnSave'])){
 		$pesanError = array();
 		if (trim($_POST['txt1'])=="") {
-			$pesanError[] = "Data <b>".$field1."</b> tidak boleh kosong !";		
+			$pesanError[] = "Data <b>".$field1."</b> tidak boleh kosong !";
 		}
 		$txt1= $_POST['txt1'];
 		$txt2= $_POST['txt2'];
@@ -14,22 +14,22 @@ if($_GET) {
 		$txt4= $_POST['txt4'];
 		$txt5= $_POST['txt5'];
 		$txt6= $_POST['txt6'];
-		
-		$cekSql="SELECT * FROM ".$tableName." WHERE ".$field1."='$txt1'";
-		$cekQry=mysqli_query($koneksidb, $cekSql) or die ("Eror Query".mysqli_error()); 
-		if(mysqli_num_rows($cekQry)>=1){
-			$pesanError[] = "Maaf, ".$isian4." <b> $txt4 </b> sudah ada, ganti dengan yang lain";
-		}		
+
+		// $cekSql="SELECT * FROM ".$tableName." WHERE ".$field1."='$txt1'";
+		// $cekQry=mysqli_query($koneksidb, $cekSql) or die ("Eror Query".mysqli_error());
+		// if(mysqli_num_rows($cekQry)>=1){
+		// 	$pesanError[] = "Maaf, ".$isian4." <b> $txt4 </b> sudah ada, ganti dengan yang lain";
+		// }		
 
 		if (count($pesanError)>=1 ){
             echo "<div class='mssgBox'>";
 			echo "<img src='images/attention.png'> <br><hr>";
 				$noPesan=0;
-				foreach ($pesanError as $indeks=>$pesan_tampil) { 
+				foreach ($pesanError as $indeks=>$pesan_tampil) {
 				$noPesan++;
-					echo "&nbsp;&nbsp; $noPesan. $pesan_tampil<br>";	
-				} 
-			echo "</div> <br>"; 
+					echo "&nbsp;&nbsp; $noPesan. $pesan_tampil<br>";
+				}
+			echo "</div> <br>";
 		}
 		else {
 			$kodeBaru	= buatKode($tableName, $huruf);
@@ -73,7 +73,7 @@ if($_GET) {
 			if ($data1 == $kolomData1['id_aspek']) {
 				$cek = "selected";
 			} else { $cek=""; }
-			
+
 			echo "<option value='$kolomData1[id_aspek]' $cek> $kolomData1[nama_aspek] </option>";
 		}
 		$mySql ="";
@@ -90,7 +90,7 @@ if($_GET) {
       <td><b><?php echo $isian3; ?></b></td>
       <td><b>:</b></td>
       <td><input name="txt3" class="span20" type="text" value="<?php echo $data3; ?>" size="60" maxlength="64"  required/></td>
-		
+
     </tr>
     <tr>
       <td><b><?php echo $isian4; ?></b></td>
@@ -106,9 +106,9 @@ if($_GET) {
       <td><b><?php echo $isian6; ?></b></td>
       <td><b>:</b></td>
 	  <td><input name="txt6" class="span20" type="text" value="<?php echo $data6; ?>" size="60" maxlength="64" required/></td>
-    </tr> 
-	
-	
+    </tr>
+
+
     <tr>
       <td>&nbsp;</td>
       <td>&nbsp;</td>
@@ -119,8 +119,8 @@ if($_GET) {
 	</table>
 						</fieldset>
 			</form>
- 
+
   </td>
-  
-  </tr> 
+
+  </tr>
 </table>
