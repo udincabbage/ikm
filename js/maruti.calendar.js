@@ -1,20 +1,20 @@
 
 $(document).ready(function(){
 	
-	unicorn.init();
+	maruti.init();
 	
 	$('#add-event-submit').click(function(){
-		unicorn.add_event();
+		maruti.add_event();
 	});
 	
 	$('#event-name').keypress(function(e){
 		if(e.which == 13) {	
-			unicorn.add_event();
+			maruti.add_event();
 		}
 	});	
 });
 
-unicorn = {	
+maruti = {	
 	
 	// === Initialize the fullCalendar and external draggable events === //
 	init: function() {	

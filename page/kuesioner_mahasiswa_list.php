@@ -119,9 +119,9 @@ $max	 = ceil($jml/$row);
 			$mySql = $pageSql." ORDER BY nama_aspek ";
 			$myQry = mysqli_query($koneksidb, $mySql)  or die ("Query salah 1 : ".mysqli_error($koneksidb));
 			$nomor  = 1;
-			while ($kolomData = mysqli_fetch_array($myQry)) {
+		//	while ($kolomData = mysqli_fetch_array($myQry)) {
 
-				$Kode = $kolomData['id_aspek'];
+				$Kode = 16;
 				$selectKuis = 'SELECT tkuis.id_kuis, tkuis.soal,
 				tkuis.jawaban_a,tkuis.jawaban_b,tkuis.jawaban_c,tkuis.jawaban_d FROM tresponden_kuis
 				LEFT JOIN tkuis ON tresponden_kuis.id_kuis=tkuis.id_kuis
@@ -134,7 +134,7 @@ $max	 = ceil($jml/$row);
 				<tr>
 
 					<td width="3%" rowspan="2"><h4> <?php echo numberToRomanRepresentation($nomor++); ?>. </h4></td>
-					<td width="97%" align="left" colspan="8"><h4> <?php echo $kolomData['nama_aspek']; ?> &nbsp; </h4></td>
+					<td width="97%" align="left" colspan="8"><h4> Mahasiswa &nbsp; </h4></td>
 
 				</tr>
 				<tr>
@@ -158,7 +158,7 @@ $max	 = ceil($jml/$row);
 			<tr>
 				<td colspan="12"><strong>&nbsp; </strong></td>
 			</tr>
-		<?php } ?>
+		<?php //} ?>
 	</table>
 	<table class="table table-bordered table-striped">
 

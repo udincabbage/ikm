@@ -1,22 +1,14 @@
 body {
-	background:url(../images/backgrounds/blue.jpg) repeat;
+	background:#49CCED;
 }
 
 #header {
-	background: rgba(46,64,153,0);
-background: -moz-linear-gradient(top, rgba(46,64,153,0) 15%, rgba(46,64,153,0.44) 42%, rgba(46,64,153,0.52) 53%, rgba(46,64,153,0.65) 70%, rgba(46,64,153,0.89) 91%, rgba(46,64,153,0.95) 96%, rgba(46,43,148,0.98) 98%, rgba(46,21,143,1) 100%);
-background: -webkit-gradient(left top, left bottom, color-stop(15%, rgba(46,64,153,0)), color-stop(42%, rgba(46,64,153,0.44)), color-stop(53%, rgba(46,64,153,0.52)), color-stop(70%, rgba(46,64,153,0.65)), color-stop(91%, rgba(46,64,153,0.89)), color-stop(96%, rgba(46,64,153,0.95)), color-stop(98%, rgba(46,43,148,0.98)), color-stop(100%, rgba(46,21,143,1)));
-background: -webkit-linear-gradient(top, rgba(46,64,153,0) 15%, rgba(46,64,153,0.44) 42%, rgba(46,64,153,0.52) 53%, rgba(46,64,153,0.65) 70%, rgba(46,64,153,0.89) 91%, rgba(46,64,153,0.95) 96%, rgba(46,43,148,0.98) 98%, rgba(46,21,143,1) 100%);
-background: -o-linear-gradient(top, rgba(46,64,153,0) 15%, rgba(46,64,153,0.44) 42%, rgba(46,64,153,0.52) 53%, rgba(46,64,153,0.65) 70%, rgba(46,64,153,0.89) 91%, rgba(46,64,153,0.95) 96%, rgba(46,43,148,0.98) 98%, rgba(46,21,143,1) 100%);
-background: -ms-linear-gradient(top, rgba(46,64,153,0) 15%, rgba(46,64,153,0.44) 42%, rgba(46,64,153,0.52) 53%, rgba(46,64,153,0.65) 70%, rgba(46,64,153,0.89) 91%, rgba(46,64,153,0.95) 96%, rgba(46,43,148,0.98) 98%, rgba(46,21,143,1) 100%);
-background: linear-gradient(to bottom, rgba(46,64,153,0) 15%, rgba(46,64,153,0.44) 42%, rgba(46,64,153,0.52) 53%, rgba(46,64,153,0.65) 70%, rgba(46,64,153,0.89) 91%, rgba(46,64,153,0.95) 96%, rgba(46,43,148,0.98) 98%, rgba(46,21,143,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2e4099', endColorstr='#2e158f', GradientType=0 );
-	border-top:3px solid #f77825;  
-    border-bottom: 1px solid #555555; margin-top:10px;
+	background-color: #2e363f;
+   margin-top:10px;
 }
 
 #search input[type=text] {
-	background-color: #fff;
+	background-color: #fff; border-left: 1px solid #e3ebed;
 }
 #search input[type=text]:focus {
 	color: #777777;
@@ -31,12 +23,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2e4099', end
 .rightzero{ right:0px; display:none;}
 @media (max-width: 480px) {
 	#sidebar > a {
-		background-image: -moz-linear-gradient(top, #464646 0%, #404040 100%);
-		border-bottom: 1px solid #6e6e6e;
+		background:#49CCED;
+		
 	}
 	#sidebar > ul {
-		background-color: #444444;
+		background-color: #49CCED;
 	}
+#user-nav{ margin:0px auto; top:-31px; border-top:none; width:250px; left:-3%; text-align:center; float:none;}
+#user-nav > ul > li:last-child{ border-right:1px solid #363E48}
+#user-nav > ul > li{ border-top:1px solid #363E48}
+#sidebar{ top:-30px;}
+#content{ margin-top:-30px;}
 }
 @media (min-width: 481px) and (max-width: 767px) {
 	#sidebar > ul ul:before {
@@ -45,4 +42,5 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2e4099', end
 	#sidebar > ul ul:after {
 		border-right: 6px solid #222222;
     }
+
 }

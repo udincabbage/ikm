@@ -1,7 +1,4 @@
-/**
- * Unicorn Admin Template
- * Diablo9983 -> diablo9983@gmail.com
-**/
+
 $(document).ready(function(){
 	
 	
@@ -37,7 +34,7 @@ $(document).ready(function(){
                 var x = item.datapoint[0].toFixed(2),
 					y = item.datapoint[1].toFixed(2);
                     
-                unicorn.flot_tooltip(item.pageX, item.pageY,item.series.label + " of " + x + " = " + y);
+                maruti.flot_tooltip(item.pageX, item.pageY,item.series.label + " of " + x + " = " + y);
             }
             
         } else {

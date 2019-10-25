@@ -10,7 +10,7 @@ include_once "lib/library.php";
 			<div class="container-fluid">
 				<div class="row-fluid">
 					<div class="span12">
-					
+
    <?php include "cont/buka_file.php";?>
 </div>
 </div>

@@ -92,7 +92,7 @@ if($_GET) {
 			include "page/column.php"; break;
 		case 'Kuesioner-Grafik-Pie' :
 			if(!file_exists ("page/pie.php")) die ("Sorry Empty Page!");
-			include "page/pie.php"; break;
+			include "page/404.php"; break;
 		case 'Total-Grafik' :
 			if(!file_exists ("page/column_total.php")) die ("Sorry Empty Page!");
 			include "page/column_total.php"; break;
@@ -220,6 +220,9 @@ if($_GET) {
 		case 'Kuesioner-Mahasiswa-List' :
 			if(!file_exists ("page/kuesioner_mahasiswa_list.php")) die ("Sorry Empty Page!");
 			include "page/kuesioner_mahasiswa_list.php"; break;
+		case 'Kuesioner-List' :
+				if(!file_exists ("page/kuesioner_list.php")) die ("Sorry Empty Page!");
+				include "page/kuesioner_list.php"; break;
 		case 'Kuesioner-Dosen-List' :
 			if(!file_exists ("page/kuesioner_dosen_list.php")) die ("Sorry Empty Page!");
 			include "page/kuesioner_dosen_list.php"; break;
