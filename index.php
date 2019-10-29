@@ -7,18 +7,18 @@ include_once "lib/library.php";
 
 
 <div id="content">
-			<div class="container-fluid">
-				<div class="row-fluid">
-					<div class="span12">
+	<div class="container-fluid">
+		<div class="row-fluid">
+			<div class="span12">
 
-   <?php include "cont/buka_file.php";?>
-</div>
-</div>
-</div>
+				<?php include "cont/buka_file.php";?>
+			</div>
+		</div>
+	</div>
 </div>
 
 
 <?php include ("cont/footer.php") ?>
-	</body>
+</body>
 
 </html>

@@ -92,7 +92,7 @@ if($_GET) {
 			include "page/column.php"; break;
 		case 'Kuesioner-Grafik-Pie' :
 			if(!file_exists ("page/pie.php")) die ("Sorry Empty Page!");
-			include "page/404.php"; break;
+			include "page/pie.php"; break;
 		case 'Total-Grafik' :
 			if(!file_exists ("page/column_total.php")) die ("Sorry Empty Page!");
 			include "page/column_total.php"; break;

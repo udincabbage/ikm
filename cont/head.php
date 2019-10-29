@@ -26,27 +26,27 @@
       <span class="label label-important">15</span></a>
       <a class="top_message tip-bottom" title="Manage Orders"><i class="icon-shopping-cart"></i></a>
     </div>
-  <!--close-top-Header-messaages-->
+    <!--close-top-Header-messaages-->
 
-  <!--top-Header-menu-->
-  <?php
-  if(isset($_SESSION['SES_MAN']))
-  {
-    include("cont/nav.php");
-    include("cont/navlist.php");
-  }
-  elseif(isset($_SESSION['SES_TU']))
-  {
-    include("cont/nav.php");
-    include("cont/navlist.php");
-  }
-  elseif(isset($_SESSION['SES_PRO']))
-  {
-    include("cont/nav.php");
-    include("cont/navlist.php");
-  }
-  else {
-    include("cont/nav-user.php");
-    include("cont/navlist-user.php");
-  }	?>
-  <!--close-top-Header-menu-->
+    <!--top-Header-menu-->
+    <?php
+    if(isset($_SESSION['SES_MAN']))
+    {
+      include("cont/nav.php");
+      include("cont/navlist.php");
+    }
+    elseif(isset($_SESSION['SES_TU']))
+    {
+      include("cont/nav.php");
+      include("cont/navlist.php");
+    }
+    elseif(isset($_SESSION['SES_PRO']))
+    {
+      include("cont/nav.php");
+      include("cont/navlist.php");
+    }
+    else {
+      include("cont/nav-user.php");
+      include("cont/navlist-user.php");
+    }	?>
+    <!--close-top-Header-menu-->

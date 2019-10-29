@@ -133,6 +133,7 @@ switch ($Kode_aspek) {
 ?>
 
 <form id="new-project"  action="?page=Kuesioner-Mahasiswa" method="post" name="form1" target="_self">
+	<div class="table-responsive">
 	<table class="table table-bordered table-striped">
 		<tr>
 			<td colspan="2"><h1><b><?php echo $aspek;?></b></h1></td>
@@ -184,6 +185,11 @@ switch ($Kode_aspek) {
 					<?php
 					switch ($Kode_aspek) {
 						case 15 :
+								$stp = $c2["Q".$nomor2]["stp"];
+								$tp = $c2["Q".$nomor2]["tp"];
+								$p = $c2["Q".$nomor2]["p"];
+								$sp = $c2["Q".$nomor2]["sp"];
+
 								$weighted_average = $c2["Q".$nomor2]["stp"]*1+
 								                    $c2["Q".$nomor2]["tp"]*2+
 																		$c2["Q".$nomor2]["p"]*3+
@@ -194,6 +200,7 @@ switch ($Kode_aspek) {
 													$c2["Q".$nomor2]["sp"];
 								$jumlah=$jumlah*4;
 								$weighted_average = ($weighted_average/$jumlah)*100;
+
 								echo "<td style=\"text-align:right\">".$c2["Q".$nomor2]["stp"]."</td>";
 								echo "<td style=\"text-align:right\">".$c2["Q".$nomor2]["tp"]."</td>";
 								echo "<td style=\"text-align:right\">".$c2["Q".$nomor2]["p"]."</td>";
@@ -201,6 +208,10 @@ switch ($Kode_aspek) {
 								echo "<td style=\"text-align:right\">".round($weighted_average,2)."</td>";
 								break;
 						case 16 :
+								$stp = $c3["Q".$nomor2]["stp"];
+								$tp = $c3["Q".$nomor2]["tp"];
+								$p = $c3["Q".$nomor2]["p"];
+								$sp = $c3["Q".$nomor2]["sp"];
 								$weighted_average = $c3["Q".$nomor2]["stp"]*1+
 								                    $c3["Q".$nomor2]["tp"]*2+
 																		$c3["Q".$nomor2]["p"]*3+
@@ -239,6 +250,10 @@ switch ($Kode_aspek) {
 								echo "<td style=\"text-align:right\">".round($weighted_average,2)."</td>";
 								break;
 						case 18 :
+								$stp = $c5["Q".$nomor2]["stp"];
+								$tp = $c5["Q".$nomor2]["tp"];
+								$p = $c5["Q".$nomor2]["p"];
+								$sp = $c5["Q".$nomor2]["sp"];
 								$weighted_average = $c5["Q".$nomor2]["stp"]*1+
 								                    $c5["Q".$nomor2]["tp"]*2+
 																		$c5["Q".$nomor2]["p"]*3+
@@ -256,6 +271,10 @@ switch ($Kode_aspek) {
 								echo "<td style=\"text-align:right\">".round($weighted_average,2)."</td>";
 								break;
 						case 19 :
+								$stp = $c6["Q".$nomor2]["stp"];
+								$tp = $c6["Q".$nomor2]["tp"];
+								$p = $c6["Q".$nomor2]["p"];
+								$sp = $c6["Q".$nomor2]["sp"];
 								$weighted_average = $c6["Q".$nomor2]["stp"]*1+
 								                    $c6["Q".$nomor2]["tp"]*2+
 																		$c6["Q".$nomor2]["p"]*3+
@@ -273,6 +292,10 @@ switch ($Kode_aspek) {
 								echo "<td style=\"text-align:right\">".round($weighted_average,2)."</td>";
 								break;
 						case 20 :
+								$stp = $c7["Q".$nomor2]["stp"];
+								$tp = $c7["Q".$nomor2]["tp"];
+								$p = $c7["Q".$nomor2]["p"];
+								$sp = $c7["Q".$nomor2]["sp"];
 								$weighted_average = $c7["Q".$nomor2]["stp"]*1+
 								                    $c7["Q".$nomor2]["tp"]*2+
 																		$c7["Q".$nomor2]["p"]*3+
@@ -290,6 +313,10 @@ switch ($Kode_aspek) {
 								echo "<td style=\"text-align:right\">".round($weighted_average,2)."</td>";
 								break;
 						case 21 :
+								$stp = $c8["Q".$nomor2]["stp"];
+								$tp = $c8["Q".$nomor2]["tp"];
+								$p = $c8["Q".$nomor2]["p"];
+								$sp = $c8["Q".$nomor2]["sp"];
 								$weighted_average = $c8["Q".$nomor2]["stp"]*1+
 								                    $c8["Q".$nomor2]["tp"]*2+
 																		$c8["Q".$nomor2]["p"]*3+
@@ -312,7 +339,7 @@ switch ($Kode_aspek) {
 					<td style="text-align:right">2</td>
 					<td style="text-align:right">3</td>
 				<?php } ?>
-					<td style="text-align:center"><a href="?page=Kuesioner-Grafik-Pie&Kode=<?php echo $Kode1; ?>&tahun=201802" target="_self"><i class="icon-adjust"></i></a></td>
+					<td style="text-align:center"><a href="?page=Kuesioner-Grafik-Pie&Kode=<?php echo $Kode1; ?>&tahun=201802&stp=<?php echo $stp; ?>&tp=<?php echo $tp; ?>&p=<?php echo $p; ?>&sp=<?php echo $sp; ?>" target="_self"><i class="icon-adjust"></i></a></td>
 				</tr>
 				<?php $nomor2++;} ?>
 
@@ -324,6 +351,7 @@ switch ($Kode_aspek) {
 			</tr>
 		<?php } ?>
 	</table>
+</div>
 	<!-- <table class="table table-bordered table-striped"> -->
 
 		<!-- <tr>
