@@ -229,6 +229,21 @@ if($_GET) {
 		case 'Kuesioner-Selesai' :
 			if(!file_exists ("page/kuesioner_selesai.php")) die ("Sorry Empty Page!");
 			include "page/kuesioner_selesai.php"; break;
+		case 'Kuesioner-Main' :
+			if(!file_exists ("page/kuesioner_main.php")) die ("Sorry Empty Page!");
+			include "page/kuesioner_main.php"; break;
+		case 'Kuesioner-Tahun' :
+			if(!file_exists ("page/kuesioner_tahun.php")) die ("Sorry Empty Page!");
+			include "page/kuesioner_tahun.php"; break;
+		case 'Kuesioner-Kriteria' :
+			if(!file_exists ("page/kuesioner_kriteria.php")) die ("Sorry Empty Page!");
+			include "page/kuesioner_kriteria.php"; break;
+		case 'Kuesioner-Jenis' :
+			if(!file_exists ("page/kuesioner_jenis.php")) die ("Sorry Empty Page!");
+			include "page/kuesioner_jenis.php"; break;
+		case 'Kuesioner-Responden' :
+			if(!file_exists ("page/kuesioner_responden.php")) die ("Sorry Empty Page!");
+			include "page/kuesioner_responden.php"; break;
 
 	# JAWABAN DATA  #SUPER ADMIN
 		case 'Jawaban-Data' :

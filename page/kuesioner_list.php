@@ -176,6 +176,8 @@ switch ($Kode_aspek) {
 				<?php
 				$nomor2=1;
 				include "data.php";
+				$rata=0;
+				$jumlah_semua=0;
 				while ($kolomData2 = mysqli_fetch_array($queryKuis)) {
 					$Kode1 = $kolomData2['id_kuis'];
 					?>
@@ -341,13 +343,19 @@ switch ($Kode_aspek) {
 				<?php } ?>
 					<td style="text-align:center"><a href="?page=Kuesioner-Grafik-Pie&Kode=<?php echo $Kode1; ?>&tahun=201802&stp=<?php echo $stp; ?>&tp=<?php echo $tp; ?>&p=<?php echo $p; ?>&sp=<?php echo $sp; ?>" target="_self"><i class="icon-adjust"></i></a></td>
 				</tr>
-				<?php $nomor2++;} ?>
+				<?php
+					$nomor2++;
+					$jumlah_semua=$jumlah_semua+round($weighted_average,2);
+				}
+				?>
 
 				<!-- <tr>
 				<td colspan="2"><strong><button type="submit"  name="btnSaveTemp" class="btn btn-primary">Simpan</button> &nbsp; <button type="reset" class="btn " name="reset" id="reset" onclick="return confirm('Reset data yang telah anda ketik?')"/>Reset</button></strong></td>
 			</tr> -->
 			<tr>
-				<td colspan="12"><strong>&nbsp; </strong></td>
+				<td style="text-align:right" colspan="6"><strong>Rata-rata</strong></td>
+				<td style="text-align:right"><strong><?php echo round($jumlah_semua/($nomor2-1),2); ?> </strong></td>
+				<td style="text-align:right"><strong><?php //echo round($jumlah_semua/($nomor2-1),2); ?> </strong></td>
 			</tr>
 		<?php } ?>
 	</table>
