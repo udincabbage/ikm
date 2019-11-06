@@ -45,7 +45,7 @@ include_once "lib/library.php";
 		</ul>
 	</li>
 	<li class=""><a title="" href="#"><i class="icon icon-cog"></i> <span class="text">Settings</span></a></li> -->
-	<li class=""><a title="" href="login.html"><i class="icon icon-share-alt"></i> <span class="text">Logout</span></a></li>
+	<li class=""><a title="" href="?page=Login"><i class="icon icon-share-alt"></i> <span class="text">Login</span></a></li>
 </ul>
 </div>
 <!-- <div id="search">
@@ -56,7 +56,20 @@ include_once "lib/library.php";
 
 <div id="sidebar"> <a href="#" class="visible-phone"><i class="icon icon-signal"></i> Charts &amp; graphs</a>
 	<ul>
-		<li class="active"><a href="index.html"><i class="icon icon-home"></i> <span>Dashboard</span></a> </li>
+		<li class="active"><a href="?page=Halaman-Utama"><i class="icon icon-home"></i> <span>Home</span></a> </li>
+		<li ><a href="?page=Kuesioner-Main"><i class="icon icon-list"></i> <span>Kuesioner</span></a> </li>
+		<li class="submenu"> <a href="#"><i class="icon icon-inbox"></i> <span>Grafik Kuesioner</span></a>
+      <ul>
+				<li><a href="?page=Kuesioner-List&Kode=15">Tata Pamong, Tata Kelola, dan Kerjasama</a></li>
+        <li><a href="?page=Kuesioner-List&Kode=16">Mahasiswa</a></li>
+        <li><a href="?page=Kuesioner-List&Kode=17">Sumber Daya Manusia</a></li>
+        <li><a href="?page=Kuesioner-List&Kode=18">Keuangan, Sarana, dan Prasarana</a></li>
+        <li><a href="?page=Kuesioner-List&Kode=19">Pendidikan</a></li>
+        <li><a href="?page=Kuesioner-List&Kode=20">Penelitian</a></li>
+        <li><a href="?page=Kuesioner-List&Kode=21">Pengabdian kepada Masyarakat</a></li>
+        <li><a href="?page=Kuesioner-List&Kode=22">Luaran dan Capaian Tridharma</a></li>
+		 </ul>
+	 </li>
 		<!-- <li> <a href="charts.html"><i class="icon icon-signal"></i> <span>Charts &amp; graphs</span></a> </li>
 		<li> <a href="widgets.html"><i class="icon icon-inbox"></i> <span>Widgets</span></a> </li>
 		<li><a href="tables.html"><i class="icon icon-th"></i> <span>Tables</span></a></li>

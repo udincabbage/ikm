@@ -7,5 +7,5 @@
 <script src="js/fullcalendar.min.js"></script>
 <script src="js/maruti.js"></script>
 <script src="js/maruti.calendar.js"></script>
-<script src="js/highcharts.js"></script>
-<script src="js/exporting.js"></script>
+<!-- <script src="js/highcharts.js"></script>
+<script src="js/exporting.js"></script> -->

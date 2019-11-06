@@ -244,6 +244,9 @@ if($_GET) {
 		case 'Kuesioner-Responden' :
 			if(!file_exists ("page/kuesioner_responden.php")) die ("Sorry Empty Page!");
 			include "page/kuesioner_responden.php"; break;
+		case 'Kuesioner-Indikator' :
+			if(!file_exists ("page/kuesioner_indikator.php")) die ("Sorry Empty Page!");
+			include "page/kuesioner_indikator.php"; break;
 
 	# JAWABAN DATA  #SUPER ADMIN
 		case 'Jawaban-Data' :

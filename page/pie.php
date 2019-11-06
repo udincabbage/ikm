@@ -582,7 +582,18 @@ while ($kolomData = mysqli_fetch_array($myQry)) {
 // $totdataQry	 = mysqli_query($koneksidb, $dataSql) or die ("error paging: ".mysql_error());
 // $totalQ	 =  mysqli_num_rows($totdataQry);
 ?>
-
+<div id="content">
+	<div id="content-header">
+		<div id="breadcrumb">
+			<a href="?page=Kuesioner-Main" title="Go to Home" class="tip-bottom">
+				<i class="icon-home"></i> Home
+			</a>
+			<a href="#" class="current">
+				Diagram Pie
+			</a>
+		</div>
+		<!-- <h1>Table Kepuasan Layanan</h1> -->
+	</div>
 <div id="viewPie" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
 
 <table class="table table-bordered table-striped">
@@ -612,7 +623,7 @@ while ($kolomData = mysqli_fetch_array($myQry)) {
 	</tr>
 
 </table>
-
+</div>
 <!-- <table class="table table-bordered table-striped span6">
 <tr>
 <th width="30" align="center"><strong>No</strong></th>
@@ -653,7 +664,7 @@ Highcharts.chart('viewPie', {
 		type: 'pie'
 	},
 	title: {
-		text: '<?php echo $pertanyaan;?>'
+		text: '<?php //echo $pertanyaan;?>'
 	},
 	tooltip: {
 		pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
@@ -680,10 +691,10 @@ Highcharts.chart('viewPie', {
 			name: 'Sangat puas',
 			y: <?php echo $sangatSetuju;?>
 		}, {
-			name: 'Tidak tahu',
+			name: 'Tidak puas',
 			y: <?php echo $tidakTahu;?>
 		}, {
-			name: 'Tidak setuju',
+			name: 'Sangat tidak setuju',
 			y: <?php echo $tidakSetuju;?>
 		}]
 	}]

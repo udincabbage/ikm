@@ -131,7 +131,18 @@ switch ($Kode_aspek) {
 					echo "Your favorite color is neither red, blue, nor green!";
 }
 ?>
-
+<div id="content">
+	<div id="content-header">
+		<div id="breadcrumb">
+			<a href="#" title="Go to Home" class="tip-bottom">
+				<i class="icon-home"></i> Home
+			</a>
+			<a href="#" class="current">
+				Table Kepuasan Layanan
+			</a>
+		</div>
+		<h1>Table Kepuasan Layanan</h1>
+	</div>
 <form id="new-project"  action="?page=Kuesioner-Mahasiswa" method="post" name="form1" target="_self">
 	<div class="table-responsive">
 	<table class="table table-bordered table-striped">
@@ -380,3 +391,4 @@ switch ($Kode_aspek) {
 	</tr>
 </table> -->
 </form>
+</div>

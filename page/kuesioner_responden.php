@@ -1,55 +1,217 @@
-<div id="content">
-	<div id="content-header">
-		<div id="breadcrumb">
-			<a href="#" title="Go to Home" class="tip-bottom">
-				<i class="icon-home"></i> Home
-			</a>
-			<a href="?page=Kuesioner-Main">
-				Table Kepuasan Layanan
-			</a>
-			<a href="?page=Kuesioner-Tahun">
-				Per Tahun
-			</a>
-			<a href="?page=Kuesioner-Responden" class="current">
-				Responden
-			</a>
+<?php
+
+// $rerata_kepuasan = array(86,81,79,77,81);
+$rerata_kepuasan = array();
+$rerata_kepuasan_responden = array();
+$kriteria = array();
+$responden = array();
+
+
+if($_GET) {
+	$id=$_GET['id'];
+	$kode=$_GET['kode'];
+	switch ($kode) {
+		case 1:
+		$aspek = "Tata Pamong, Tata Kelola, dan Kerjasama";
+		$kriteria[0] = "2018/2019 Genap";
+		$rerata_kepuasan[0] = 83;
+		$rerata_kepuasan_responden[0] = 81;
+		$rerata_kepuasan_responden[1] = 85;
+		$rerata_kepuasan_responden[2] = 83;
+		$responden[0] = "Mahasiswa";
+		$responden[1] = "Dosen";
+		$responden[2] = "Tenaga Kependidikan";
+		break;
+		case 2:
+		$aspek = "Kemahasiswaan";
+		$kriteria[0] = "2018/2019 Genap";
+		$rerata_kepuasan_responden[0] = 87;
+		$responden[0] = "Mahasiswa";
+		break;
+		case 3:
+		$aspek = "Sumber Daya Manusia";
+		$kriteria[0] = "2018/2019 Genap";
+		$kriteria[1] = "2018/2019 Ganjil";
+		$kriteria[2] = "2017/2018 Genap";
+		$kriteria[3] = "2017/2018 Ganjil";
+		$rerata_kepuasan[0] = 86;
+		$rerata_kepuasan[1] = 81;
+		$rerata_kepuasan[2] = 79;
+		$rerata_kepuasan[3] = 77;
+		break;
+		case 4:
+		$aspek = "Keuangan";
+		$kriteria[0] = "2018/2019 Genap";
+		$rerata_kepuasan[0] = 84;
+		break;
+		case 5:
+		$aspek = "Sarana dan Prasarana";
+		$kriteria[0] = "2018/2019 Genap";
+		$rerata_kepuasan[0] = 61;
+		break;
+		case 6:
+		$aspek = "Pendidikan";
+		$kriteria[0] = "2018/2019 Genap";
+		$rerata_kepuasan[0] = 84;
+		break;
+		case 7:
+		$aspek = "Penelitian";
+		$kriteria[0] = "2018/2019 Genap";
+		$rerata_kepuasan[0] = 83;
+		break;
+		case 8:
+		$aspek = "pengabdian kepada Masyarakat";
+		$kriteria[0] = "2018/2019 Genap";
+		$rerata_kepuasan[0] = 82;
+		break;
+		case 9:
+		$aspek = "Lembaga Penjaminan Mutu";
+		$kriteria[0] = "2018/2019 Genap";
+		$rerata_kepuasan[0] = 87;
+		break;
+		default:
+		echo "KOSONG";
+	}
+
+	?>
+
+	<div id="content">
+		<div id="content-header">
+			<div id="breadcrumb">
+				<a href="#" title="Go to Home" class="tip-bottom">
+					<i class="icon-home"></i> Home
+				</a>
+				<a href="?page=Kuesioner-Main">
+					Table Kepuasan Layanan
+				</a>
+				<a href="?page=Kuesioner-Tahun&id=<?php echo $kode;?>">
+					Per Tahun
+				</a>
+				<a href="?page=Kuesioner-Responden" class="current">
+					Responden
+				</a>
+			</div>
+			<h1><?php echo $aspek." > ",$kriteria[0]; ?></h1>
 		</div>
-		<h1>Sumber Daya Manusia</h1>
-	</div>
 		<div class="container-fluid">
 			<div class="row-fluid">
-				<div class="span12">
-					<div class="table-responsive">
-						<table class="table table-bordered table-striped">
-							<thead>
-								<tr>
-									<td style="text-align:center"><strong>No</strong></td>
-									<td style="text-align:center"><strong>Responden</strong></td>
-									<td style="text-align:center"><strong>Rerata</strong></td>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td style="text-align:center">1</td>
-									<td>Dosen</td>
-									<td style="text-align:right"><a href="?page=Kuesioner-Jenis">82</a></td>
-								</tr>
-								<tr>
-									<td style="text-align:center">2</td>
-									<td>Tenaga Kependidikan</td>
-									<td style="text-align:right"><a href="?page=Kuesioner-Jenis">81</a></td>
-								</tr>
-								<tr>
-									<td colspan="2" >Rerata</td>
-									<td style="text-align:right">81</td>
-								</tr>
-							</tbody>
+				<div class="span6">
+					<div class="widget-box">
+						<div class="widget-title"> <span class="icon"> <i class="icon-list"></i> </span>
+							<h5>Tabel</h5>
+						</div>
+						<div class="widget-content">
+							<div class="table-responsive">
+								<table class="table table-bordered table-striped">
+									<thead>
+										<tr>
+											<td style="text-align:center"><strong>No</strong></td>
+											<td style="text-align:center"><strong>Responden</strong></td>
+											<td style="text-align:center"><strong>Rerata</strong></td>
+										</tr>
+									</thead>
+									<tbody>
+										<?php
+										$jumlah_responden = sizeof($responden);
+										$rerata_kepuasan_responden = array_filter($rerata_kepuasan_responden);
+										if(count($rerata_kepuasan_responden)) {
+										    $average = array_sum($rerata_kepuasan_responden)/count($rerata_kepuasan_responden);
+										}
+										for ($i=0; $i < $jumlah_responden; $i++) {
+											$j=$i+1;
+											echo "<tr>
+												<td style=\"text-align:center\">".$j."</td>
+												<td>".$responden[$i]."</td>
+												<td style=\"text-align:right\"><a href=\"?page=Kuesioner-Indikator&kode=$kode&id=$j&r=$responden[$i]\">".$rerata_kepuasan_responden[$i]."</a></td>
+											</tr>";
+										}
+										?>
+										<tr>
+											<td colspan="2" >Rerata</td>
+											<td style="text-align:right"><?php echo round($average,0);?></td>
+										</tr>
+									</tbody>
 
-						</table>
+								</table>
+							</div>
+						</div>
 					</div>
-
+				</div>
+				<div class="span6">
+					<div class="widget-box">
+						<div class="widget-title"> <span class="icon"> <i class="icon-signal"></i> </span>
+							<h5>Bar chart</h5>
+						</div>
+						<div class="widget-content">
+							<div class="bars" id="bars" style="min-width: 300px; height: 400px; margin: 0 auto"></div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</form>
 </div>
+<?php } ?>
+
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+
+<script type="text/javascript">
+Highcharts.chart('bars', {
+	chart: {
+		type: 'column'
+	},
+	title: {
+		text: 'Rerata Kepuasan Layanan'
+	},
+	subtitle: {
+		text: 'Universitas Islam Kalimantan Islam MAB'
+	},
+	xAxis: {
+		type: 'category',
+		labels: {
+			rotation: -45,
+			style: {
+				fontSize: '13px',
+				fontFamily: 'Verdana, sans-serif'
+			}
+		}
+	},
+	yAxis: {
+		min: 0,
+		title: {
+			text: 'Rerata Kepuasan (%)'
+		}
+	},
+	legend: {
+		enabled: false
+	},
+	tooltip: {
+		pointFormat: 'Nilai Kepuasan tiap semester: <b>{point.y:.1f} %</b>'
+	},
+	series: [{
+		name: 'Population',
+		data: [
+				<?php
+					$rep = sizeof($responden);
+					for ($i=0; $i < $rep; $i++) {
+						echo "['".$responden[$i]."',".$rerata_kepuasan_responden[$i]."],";
+					}
+				 ?>
+		],
+		dataLabels: {
+			enabled: true,
+			rotation: -90,
+			color: '#FFFFFF',
+			align: 'right',
+			format: '{point.y:.1f}', // one decimal
+			y: 10, // 10 pixels down from the top
+			style: {
+				fontSize: '13px',
+				fontFamily: 'Verdana, sans-serif'
+			}
+		}
+	}]
+});
+</script>

@@ -1,4 +1,15 @@
-
+<div id="content">
+	<div id="content-header">
+		<div id="breadcrumb">
+			<a href="#" title="Go to Home" class="tip-bottom">
+				<i class="icon-home"></i> Home
+			</a>
+			<a href="#" class="current">
+				Table Kepuasan Layanan
+			</a>
+		</div>
+		<h1>Table Kepuasan Layanan</h1>
+	</div>
 	<?php
 	if(isset($_SESSION['SES_MAN'])) {?>
 	<legend>ADMINISTRATOR </legend>
@@ -16,3 +27,4 @@
 	<legend>USER </legend>
 	<p> Selamat datang di website kami, silakan gunakan menu navigasi untuk mencari informasi lebih lanjut. Anda juga bisa menggunakan login untuk memproses lebih lanjut informasi ataupun melakukan perubahan data dalam Sistem Informasi ini</p>
 	<?php }?>
+</div>
