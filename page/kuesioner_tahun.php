@@ -37,7 +37,7 @@ if($_GET) {
 		case 5:
 			$aspek = "Sarana dan Prasarana";
 			$kriteria[0] = "2018/2019 Genap";
-			$rerata_kepuasan[0] = 61;
+			$rerata_kepuasan[0] = 71;
 			break;
 		case 6:
 			$aspek = "Pendidikan";

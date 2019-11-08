@@ -214,61 +214,290 @@ if($_GET) {
 		case 2:
 		$aspek = "Kemahasiswaan";
 		$kriteria[0] = "2018/2019 Genap";
-			$pertanyaan[0] = "Mahasiswa mendapatkan layanan pada saat registrasi mahasiswa baru";
-			$pertanyaan[1] = "Mahasiswa mendapatkan layanan Kepenasehatan Akademik";
-			$pertanyaan[2] = "Mahasiswa mendapatkan layanan pelaksanaan perkuliahan";
-			$pertanyaan[3] = "Mahasiswa mendapatan pendidikan karakter";
-			$pertanyaan[4] = "Mahasiswa mendapatkan pendidikan tentang anti korupsi";
-			$pertanyaan[5] = "Mahasiswa mendapatkan pendidikan NAPZA";
-			$pertanyaan[6] = "Kurikulum yang diajarkan sesuai dengan perkembangan ilmu pengetahuan dan teknologi";
-			$pertanyaan[7] = "Kejelasan materi perkuliahan yang diberikan dosen";
-			$pertanyaan[8] = "Waktu dipergunakan secara efektif oleh dosen dalam proses pembelajaran";
-			$pertanyaan[9] = "Dosen memberikan tugas sesuai dengan capaian pembelajaran";
-			$pertanyaan[10] = "Mahasiswa mendapatkan layanan Pelaksanaan UTS";
-			$pertanyaan[11] = "Mahasiswa mendapatkan layanan Praktikum";
-			$pertanyaan[12] = "Mahasiswa mendapatkan layanan pembimbingan magang/PL";
-			$pertanyaan[13] = "Mahasiswa dilibatkan dalam penelitian atau PkM dosen";
-			$pertanyaan[14] = "Mahasiswa mendapatkan layanan pembimbingan Skripsi/Tesis";
-			$pertanyaan[15] = "Dosen memasukkan hasil penelitiannya dalam pembelajaran";
-			$pertanyaan[16] = "Mahasiswa mendapatkan layanan pengembangan suasana akademik.";
+		$pertanyaan[0] = "Mahasiswa mendapatkan layanan pada saat registrasi mahasiswa baru";
+		$pertanyaan[1] = "Mahasiswa mendapatkan layanan Kepenasehatan Akademik";
+		$pertanyaan[2] = "Mahasiswa mendapatkan layanan pelaksanaan perkuliahan";
+		$pertanyaan[3] = "Mahasiswa mendapatan pendidikan karakter";
+		$pertanyaan[4] = "Mahasiswa mendapatkan pendidikan tentang anti korupsi";
+		$pertanyaan[5] = "Mahasiswa mendapatkan pendidikan NAPZA";
+		$pertanyaan[6] = "Kurikulum yang diajarkan sesuai dengan perkembangan ilmu pengetahuan dan teknologi";
+		$pertanyaan[7] = "Kejelasan materi perkuliahan yang diberikan dosen";
+		$pertanyaan[8] = "Waktu dipergunakan secara efektif oleh dosen dalam proses pembelajaran";
+		$pertanyaan[9] = "Dosen memberikan tugas sesuai dengan capaian pembelajaran";
+		$pertanyaan[10] = "Mahasiswa mendapatkan layanan Pelaksanaan UTS";
+		$pertanyaan[11] = "Mahasiswa mendapatkan layanan Praktikum";
+		$pertanyaan[12] = "Mahasiswa mendapatkan layanan pembimbingan magang/PL";
+		$pertanyaan[13] = "Mahasiswa dilibatkan dalam penelitian atau PkM dosen";
+		$pertanyaan[14] = "Mahasiswa mendapatkan layanan pembimbingan Skripsi/Tesis";
+		$pertanyaan[15] = "Dosen memasukkan hasil penelitiannya dalam pembelajaran";
+		$pertanyaan[16] = "Mahasiswa mendapatkan layanan pengembangan suasana akademik.";
 
-			$stp[0]=0;$tp[0]=0;$p[0]=2128;$sp[0]=2080;
-			$stp[1]=0;$tp[1]=0;$p[1]=2319;$sp[1]=1889;
-			$stp[2]=0;$tp[2]=0;$p[2]=2035;$sp[2]=2173;
-			$stp[3]=0;$tp[3]=0;$p[3]=2077;$sp[3]=2131;
-			$stp[4]=0;$tp[4]=0;$p[4]=2078;$sp[4]=2130;
-			$stp[5]=0;$tp[5]=0;$p[5]=2105;$sp[5]=2103;
-			$stp[6]=0;$tp[6]=0;$p[6]=2068;$sp[6]=2140;
-			$stp[7]=0;$tp[7]=0;$p[7]=2172;$sp[7]=2036;
-			$stp[8]=0;$tp[8]=0;$p[8]=2186;$sp[8]=2022;
-			$stp[9]=0;$tp[9]=0;$p[9]=2232;$sp[9]=1976;
-			$stp[10]=0;$tp[10]=0;$p[10]=2278;$sp[10]=1930;
-			$stp[11]=0;$tp[11]=0;$p[11]=2249;$sp[11]=1959;
-			$stp[12]=0;$tp[12]=0;$p[12]=2330;$sp[12]=1878;
-			$stp[13]=0;$tp[13]=0;$p[13]=2168;$sp[13]=2040;
-			$stp[14]=0;$tp[14]=0;$p[14]=2090;$sp[14]=2118;
-			$stp[15]=0;$tp[15]=0;$p[15]=2373;$sp[15]=1835;
-			$stp[16]=0;$tp[16]=0;$p[16]=2210;$sp[16]=1998;
+		$stp[0]=0;$tp[0]=0;$p[0]=2128;$sp[0]=2080;
+		$stp[1]=0;$tp[1]=0;$p[1]=2319;$sp[1]=1889;
+		$stp[2]=0;$tp[2]=0;$p[2]=2035;$sp[2]=2173;
+		$stp[3]=0;$tp[3]=0;$p[3]=2077;$sp[3]=2131;
+		$stp[4]=0;$tp[4]=0;$p[4]=2078;$sp[4]=2130;
+		$stp[5]=0;$tp[5]=0;$p[5]=2105;$sp[5]=2103;
+		$stp[6]=0;$tp[6]=0;$p[6]=2068;$sp[6]=2140;
+		$stp[7]=0;$tp[7]=0;$p[7]=2172;$sp[7]=2036;
+		$stp[8]=0;$tp[8]=0;$p[8]=2186;$sp[8]=2022;
+		$stp[9]=0;$tp[9]=0;$p[9]=2232;$sp[9]=1976;
+		$stp[10]=0;$tp[10]=0;$p[10]=2278;$sp[10]=1930;
+		$stp[11]=0;$tp[11]=0;$p[11]=2249;$sp[11]=1959;
+		$stp[12]=0;$tp[12]=0;$p[12]=2330;$sp[12]=1878;
+		$stp[13]=0;$tp[13]=0;$p[13]=2168;$sp[13]=2040;
+		$stp[14]=0;$tp[14]=0;$p[14]=2090;$sp[14]=2118;
+		$stp[15]=0;$tp[15]=0;$p[15]=2373;$sp[15]=1835;
+		$stp[16]=0;$tp[16]=0;$p[16]=2210;$sp[16]=1998;
 
 
 		break;
 		case 3:
 		$aspek = "Sumber Daya Manusia";
 		$kriteria[0] = "2018/2019 Genap";
-		$rerata_kepuasan[0] = 86;
-		$rerata_kepuasan[1] = 81;
-		$rerata_kepuasan[2] = 79;
-		$rerata_kepuasan[3] = 77;
+		if($responden=="Dosen"){
+			$pertanyaan[0] = "Kepuasan terhadap pengembangan karir";
+			$pertanyaan[1] = "Kepuasan bekerja sesuai dengan tugas dan fungsi";
+			$pertanyaan[2] = "Beban kerja";
+			$pertanyaan[3] = "Arahan pimpinan";
+			$pertanyaan[4] = "Keteladanan pimpinan";
+			$pertanyaan[5] = "Sinkronisasi kebijakan pimpinan";
+			$pertanyaan[6] = "Konsistensi penegakan aturan";
+			$pertanyaan[7] = "Suasana kerja";
+			$pertanyaan[8] = "Penghasilan";
+			$pertanyaan[9] = "Penghargaan Prestasi";
+			$pertanyaan[10] = "Keamanan Tempat Kerja";
+			$pertanyaan[11] = "Jaminan Sosial";
+
+			$stp[0]=0;$tp[0]=0;$p[0]=287;$sp[0]=119;
+			$stp[1]=0;$tp[1]=0;$p[1]=310;$sp[1]=96;
+			$stp[2]=0;$tp[2]=0;$p[2]=193;$sp[2]=213;
+			$stp[3]=0;$tp[3]=0;$p[3]=191;$sp[3]=215;
+			$stp[4]=0;$tp[4]=0;$p[4]=208;$sp[4]=198;
+			$stp[5]=0;$tp[5]=0;$p[5]=235;$sp[5]=171;
+			$stp[6]=0;$tp[6]=0;$p[6]=209;$sp[6]=197;
+			$stp[7]=0;$tp[7]=0;$p[7]=191;$sp[7]=215;
+			$stp[8]=0;$tp[8]=0;$p[8]=252;$sp[8]=154;
+			$stp[9]=0;$tp[9]=0;$p[9]=190;$sp[9]=216;
+			$stp[10]=0;$tp[10]=0;$p[10]=191;$sp[10]=215;
+			$stp[11]=0;$tp[11]=0;$p[11]=193;$sp[11]=213;
+		}else if($responden=="Tenaga Kependidikan"){
+				$pertanyaan[0] = "Kepuasan terhadap pengembangan karir";
+				$pertanyaan[1] = "Kepuasan bekerja sesuai dengan tugas dan fungsi";
+				$pertanyaan[2] = "Beban kerja";
+				$pertanyaan[3] = "Arahan pimpinan";
+				$pertanyaan[4] = "Keteladanan pimpinan";
+				$pertanyaan[5] = "Sinkronisasi kebijakan pimpinan";
+				$pertanyaan[6] = "Konsistensi penegakan aturan";
+				$pertanyaan[7] = "Suasana kerja";
+				$pertanyaan[8] = "Penghasilan";
+				$pertanyaan[9] = "Penghargaan Prestasi";
+				$pertanyaan[10] = "Keamanan Tempat Kerja";
+				$pertanyaan[11] = "Jaminan Sosial";
+
+				$stp[0]=0;$tp[0]=0;$p[0]=76;$sp[0]=30;
+				$stp[1]=0;$tp[1]=0;$p[1]=82;$sp[1]=24;
+				$stp[2]=0;$tp[2]=0;$p[2]=50;$sp[2]=56;
+				$stp[3]=0;$tp[3]=0;$p[3]=49;$sp[3]=57;
+				$stp[4]=0;$tp[4]=0;$p[4]=53;$sp[4]=53;
+				$stp[5]=0;$tp[5]=0;$p[5]=61;$sp[5]=45;
+				$stp[6]=0;$tp[6]=0;$p[6]=54;$sp[6]=52;
+				$stp[7]=0;$tp[7]=0;$p[7]=49;$sp[7]=57;
+				$stp[8]=0;$tp[8]=0;$p[8]=66;$sp[8]=40;
+				$stp[9]=0;$tp[9]=0;$p[9]=50;$sp[9]=56;
+				$stp[10]=0;$tp[10]=0;$p[10]=49;$sp[10]=57;
+				$stp[11]=0;$tp[11]=0;$p[11]=50;$sp[11]=56;
+		}
 		break;
 		case 4:
 		$aspek = "Keuangan";
 		$kriteria[0] = "2018/2019 Genap";
-		$rerata_kepuasan[0] = 84;
+		if($responden=="Dosen"){
+			$pertanyaan[0] = "Prosedur pelayanan di Biro Keuangan tidak berbelit-belit ";
+			$pertanyaan[1] = "Proses pelayanan di Biro Keuangan cepat dan tepat ";
+			$pertanyaan[2] = "Kegiatan administrasi rapi dan teratur ";
+			$pertanyaan[3] = "Staf Biro Keuangan memberikan pelayanan yang memuaskan sesuai dengan kebutuhan anda ";
+			$pertanyaan[4] = "Staf Biro Keuangan menunjukkan disiplin kerja yang tinggi ";
+			$pertanyaan[5] = "Staf Biro Keuangan memberi tanggapan yang cepat dan baik terhadap keluhan anda ";
+			$pertanyaan[6] = "Prosedur penyampaian informasi jelas dan mudah dimengerti ";
+			$pertanyaan[7] = "Staf Biro Keuangan selalu ada sesuai jadwal ";
+			$pertanyaan[8] = "Staf Biro Keuangan memiliki kemampuan, pengetahuan, dan kecakapan yang tinggi dalam menjalankan tugasnya ";
+			$pertanyaan[9] = "Biro Keuangan memberikan kemudahan dalam akses pelayanan administrasi keuangan ";
+			$pertanyaan[10] = "Biro Keuangan tidak membiarkan pengguna layanan menunggu terlalu lama";
+			$pertanyaan[11] = "Staf Biro Keuangan bertugas sepenuh hati dalam memberikan pelayanan ";
+			$pertanyaan[12] = "Komunikasi Staf Biro Keuangan dengan pengguna layanan berjalan dengan baik dan lancar ";
+			$pertanyaan[13] = "Staf Biro Keuangan memberikan perlakuan yang adil kepada setiap pengguna layanan ";
+			$pertanyaan[14] = "Ruang pelayanan dan ruang tunggu Biro Keuangan sudah nyaman ";
+			$pertanyaan[15] = "Staf Biro Keuangan berpenampilan rapi, sopan sesuai dengan situasi dan kondisi  ";
+			$pertanyaan[16] = "Kantor Biro Keuangan tertata rapi dan bersih";
+			$pertanyaan[17] = "Informasi yang diberikan Biro Keuangan dapat diandalkan ";
+			$pertanyaan[18] = "Sistem Informasi yang ada di Biro Keuangan bekerja dengan handal  ";
+
+			$stp[0]=0;$tp[0]=0;$p[0]=2659;$sp[0]=1549;
+			$stp[1]=0;$tp[1]=0;$p[1]=2249;$sp[1]=1959;
+			$stp[2]=0;$tp[2]=0;$p[2]=2104;$sp[2]=2104;
+			$stp[3]=0;$tp[3]=0;$p[3]=2090;$sp[3]=2118;
+			$stp[4]=0;$tp[4]=0;$p[4]=2128;$sp[4]=2080;
+			$stp[5]=0;$tp[5]=0;$p[5]=2232;$sp[5]=1976;
+			$stp[6]=0;$tp[6]=0;$p[6]=2078;$sp[6]=2130;
+			$stp[7]=0;$tp[7]=0;$p[7]=2207;$sp[7]=2001;
+			$stp[8]=0;$tp[8]=0;$p[8]=2099;$sp[8]=2109;
+			$stp[9]=0;$tp[9]=0;$p[9]=3108;$sp[9]=1100;
+			$stp[10]=0;$tp[10]=0;$p[10]=3037;$sp[10]=1171;
+			$stp[11]=0;$tp[11]=0;$p[11]=3008;$sp[11]=1200;
+			$stp[12]=0;$tp[12]=0;$p[12]=2808;$sp[12]=1400;
+			$stp[13]=0;$tp[13]=0;$p[13]=3122;$sp[13]=1086;
+			$stp[14]=0;$tp[14]=0;$p[14]=2985;$sp[14]=1223;
+			$stp[15]=0;$tp[15]=0;$p[15]=2963;$sp[15]=1245;
+			$stp[16]=0;$tp[16]=0;$p[16]=2787;$sp[16]=1421;
+			$stp[17]=0;$tp[17]=0;$p[17]=2132;$sp[17]=2076;
+			$stp[18]=0;$tp[18]=0;$p[18]=2656;$sp[18]=1554;
+		}else if($responden=="Tenaga Kependidikan"){
+			$pertanyaan[0] = "Prosedur pelayanan di Biro Keuangan tidak berbelit-belit ";
+			$pertanyaan[1] = "Proses pelayanan di Biro Keuangan cepat dan tepat ";
+			$pertanyaan[2] = "Kegiatan administrasi rapi dan teratur ";
+			$pertanyaan[3] = "Staf Biro Keuangan memberikan pelayanan yang memuaskan sesuai dengan kebutuhan anda ";
+			$pertanyaan[4] = "Staf Biro Keuangan menunjukkan disiplin kerja yang tinggi ";
+			$pertanyaan[5] = "Staf Biro Keuangan memberi tanggapan yang cepat dan baik terhadap keluhan anda ";
+			$pertanyaan[6] = "Prosedur penyampaian informasi jelas dan mudah dimengerti ";
+			$pertanyaan[7] = "Staf Biro Keuangan selalu ada sesuai jadwal ";
+			$pertanyaan[8] = "Staf Biro Keuangan memiliki kemampuan, pengetahuan, dan kecakapan yang tinggi dalam menjalankan tugasnya ";
+			$pertanyaan[9] = "Biro Keuangan memberikan kemudahan dalam akses pelayanan administrasi keuangan ";
+			$pertanyaan[10] = "Biro Keuangan tidak membiarkan pengguna layanan menunggu terlalu lama";
+			$pertanyaan[11] = "Staf Biro Keuangan bertugas sepenuh hati dalam memberikan pelayanan ";
+			$pertanyaan[12] = "Komunikasi Staf Biro Keuangan dengan pengguna layanan berjalan dengan baik dan lancar ";
+			$pertanyaan[13] = "Staf Biro Keuangan memberikan perlakuan yang adil kepada setiap pengguna layanan ";
+			$pertanyaan[14] = "Ruang pelayanan dan ruang tunggu Biro Keuangan sudah nyaman ";
+			$pertanyaan[15] = "Staf Biro Keuangan berpenampilan rapi, sopan sesuai dengan situasi dan kondisi  ";
+			$pertanyaan[16] = "Kantor Biro Keuangan tertata rapi dan bersih";
+			$pertanyaan[17] = "Informasi yang diberikan Biro Keuangan dapat diandalkan ";
+			$pertanyaan[18] = "Sistem Informasi yang ada di Biro Keuangan bekerja dengan handal  ";
+
+			$stp[0]=0;$tp[0]=0;$p[0]=2659;$sp[0]=1549;
+			$stp[1]=0;$tp[1]=0;$p[1]=2249;$sp[1]=1959;
+			$stp[2]=0;$tp[2]=0;$p[2]=2104;$sp[2]=2104;
+			$stp[3]=0;$tp[3]=0;$p[3]=2090;$sp[3]=2118;
+			$stp[4]=0;$tp[4]=0;$p[4]=2128;$sp[4]=2080;
+			$stp[5]=0;$tp[5]=0;$p[5]=2232;$sp[5]=1976;
+			$stp[6]=0;$tp[6]=0;$p[6]=2078;$sp[6]=2130;
+			$stp[7]=0;$tp[7]=0;$p[7]=2207;$sp[7]=2001;
+			$stp[8]=0;$tp[8]=0;$p[8]=2099;$sp[8]=2109;
+			$stp[9]=0;$tp[9]=0;$p[9]=3108;$sp[9]=1100;
+			$stp[10]=0;$tp[10]=0;$p[10]=3037;$sp[10]=1171;
+			$stp[11]=0;$tp[11]=0;$p[11]=3008;$sp[11]=1200;
+			$stp[12]=0;$tp[12]=0;$p[12]=2808;$sp[12]=1400;
+			$stp[13]=0;$tp[13]=0;$p[13]=3122;$sp[13]=1086;
+			$stp[14]=0;$tp[14]=0;$p[14]=2985;$sp[14]=1223;
+			$stp[15]=0;$tp[15]=0;$p[15]=2963;$sp[15]=1245;
+			$stp[16]=0;$tp[16]=0;$p[16]=2787;$sp[16]=1421;
+			$stp[17]=0;$tp[17]=0;$p[17]=2132;$sp[17]=2076;
+			$stp[18]=0;$tp[18]=0;$p[18]=2656;$sp[18]=1554;
+		}else if($responden=="Mahasiswa"){
+				$pertanyaan[0] = "Prosedur pelayanan di Biro Keuangan tidak berbelit-belit ";
+				$pertanyaan[1] = "Proses pelayanan di Biro Keuangan cepat dan tepat ";
+				$pertanyaan[2] = "Kegiatan administrasi rapi dan teratur ";
+				$pertanyaan[3] = "Staf Biro Keuangan memberikan pelayanan yang memuaskan sesuai dengan kebutuhan anda ";
+				$pertanyaan[4] = "Staf Biro Keuangan menunjukkan disiplin kerja yang tinggi ";
+				$pertanyaan[5] = "Staf Biro Keuangan memberi tanggapan yang cepat dan baik terhadap keluhan anda ";
+				$pertanyaan[6] = "Prosedur penyampaian informasi jelas dan mudah dimengerti ";
+				$pertanyaan[7] = "Staf Biro Keuangan selalu ada sesuai jadwal ";
+				$pertanyaan[8] = "Staf Biro Keuangan memiliki kemampuan, pengetahuan, dan kecakapan yang tinggi dalam menjalankan tugasnya ";
+				$pertanyaan[9] = "Biro Keuangan memberikan kemudahan dalam akses pelayanan administrasi keuangan ";
+				$pertanyaan[10] = "Biro Keuangan tidak membiarkan pengguna layanan menunggu terlalu lama";
+				$pertanyaan[11] = "Staf Biro Keuangan bertugas sepenuh hati dalam memberikan pelayanan ";
+				$pertanyaan[12] = "Komunikasi Staf Biro Keuangan dengan pengguna layanan berjalan dengan baik dan lancar ";
+				$pertanyaan[13] = "Staf Biro Keuangan memberikan perlakuan yang adil kepada setiap pengguna layanan ";
+				$pertanyaan[14] = "Ruang pelayanan dan ruang tunggu Biro Keuangan sudah nyaman ";
+				$pertanyaan[15] = "Staf Biro Keuangan berpenampilan rapi, sopan sesuai dengan situasi dan kondisi  ";
+				$pertanyaan[16] = "Kantor Biro Keuangan tertata rapi dan bersih";
+				$pertanyaan[17] = "Informasi yang diberikan Biro Keuangan dapat diandalkan ";
+				$pertanyaan[18] = "Sistem Informasi yang ada di Biro Keuangan bekerja dengan handal  ";
+
+				$stp[0]=0;$tp[0]=0;$p[0]=2659;$sp[0]=1549;
+				$stp[1]=0;$tp[1]=0;$p[1]=2249;$sp[1]=1959;
+				$stp[2]=0;$tp[2]=0;$p[2]=2104;$sp[2]=2104;
+				$stp[3]=0;$tp[3]=0;$p[3]=2090;$sp[3]=2118;
+				$stp[4]=0;$tp[4]=0;$p[4]=2128;$sp[4]=2080;
+				$stp[5]=0;$tp[5]=0;$p[5]=2232;$sp[5]=1976;
+				$stp[6]=0;$tp[6]=0;$p[6]=2078;$sp[6]=2130;
+				$stp[7]=0;$tp[7]=0;$p[7]=2207;$sp[7]=2001;
+				$stp[8]=0;$tp[8]=0;$p[8]=2099;$sp[8]=2109;
+				$stp[9]=0;$tp[9]=0;$p[9]=3108;$sp[9]=1100;
+				$stp[10]=0;$tp[10]=0;$p[10]=3037;$sp[10]=1171;
+				$stp[11]=0;$tp[11]=0;$p[11]=3008;$sp[11]=1200;
+				$stp[12]=0;$tp[12]=0;$p[12]=2808;$sp[12]=1400;
+				$stp[13]=0;$tp[13]=0;$p[13]=3122;$sp[13]=1086;
+				$stp[14]=0;$tp[14]=0;$p[14]=2985;$sp[14]=1223;
+				$stp[15]=0;$tp[15]=0;$p[15]=2963;$sp[15]=1245;
+				$stp[16]=0;$tp[16]=0;$p[16]=2787;$sp[16]=1421;
+				$stp[17]=0;$tp[17]=0;$p[17]=2132;$sp[17]=2076;
+				$stp[18]=0;$tp[18]=0;$p[18]=2656;$sp[18]=1554;
+		}
+
 		break;
 		case 5:
 		$aspek = "Sarana dan Prasarana";
 		$kriteria[0] = "2018/2019 Genap";
 		$rerata_kepuasan[0] = 61;
+
+		if($responden=="Dosen"){
+			$pertanyaan[0] = "Ruang Kuliah";
+			$pertanyaan[1] = "Ruang Kantor";
+			$pertanyaan[2] = "Ruang Perpustakaan";
+			$pertanyaan[3] = "Sarana Praktikum";
+			$pertanyaan[4] = "Sarana Ibadah";
+			$pertanyaan[5] = "Kantin";
+			$pertanyaan[6] = "Lahan Parkir";
+			$pertanyaan[7] = "WC";
+
+
+			$stp[0]=0;$tp[0]=0;$p[0]=2659;$sp[0]=1549;
+			$stp[1]=0;$tp[1]=0;$p[1]=2249;$sp[1]=1959;
+			$stp[2]=0;$tp[2]=0;$p[2]=2104;$sp[2]=2104;
+			$stp[3]=0;$tp[3]=0;$p[3]=2090;$sp[3]=2118;
+			$stp[4]=0;$tp[4]=0;$p[4]=2128;$sp[4]=2080;
+			$stp[5]=0;$tp[5]=0;$p[5]=2232;$sp[5]=1976;
+			$stp[6]=0;$tp[6]=0;$p[6]=2078;$sp[6]=2130;
+			$stp[7]=0;$tp[7]=0;$p[7]=2207;$sp[7]=2001;
+		}else if($responden=="Tenaga Kependidikan"){
+			$pertanyaan[0] = "Ruang Kuliah";
+			$pertanyaan[1] = "Ruang Kantor";
+			$pertanyaan[2] = "Ruang Perpustakaan";
+			$pertanyaan[3] = "Sarana Praktikum";
+			$pertanyaan[4] = "Sarana Ibadah";
+			$pertanyaan[5] = "Kantin";
+			$pertanyaan[6] = "Lahan Parkir";
+			$pertanyaan[7] = "WC";
+
+
+			$stp[0]=0;$tp[0]=0;$p[0]=2659;$sp[0]=1549;
+			$stp[1]=0;$tp[1]=0;$p[1]=2249;$sp[1]=1959;
+			$stp[2]=0;$tp[2]=0;$p[2]=2104;$sp[2]=2104;
+			$stp[3]=0;$tp[3]=0;$p[3]=2090;$sp[3]=2118;
+			$stp[4]=0;$tp[4]=0;$p[4]=2128;$sp[4]=2080;
+			$stp[5]=0;$tp[5]=0;$p[5]=2232;$sp[5]=1976;
+			$stp[6]=0;$tp[6]=0;$p[6]=2078;$sp[6]=2130;
+			$stp[7]=0;$tp[7]=0;$p[7]=2207;$sp[7]=2001;
+		}else if($responden=="Mahasiswa"){
+				$pertanyaan[0] = "Ruang Kuliah";
+				$pertanyaan[1] = "Ruang Kantor";
+				$pertanyaan[2] = "Ruang Perpustakaan";
+				$pertanyaan[3] = "Sarana Praktikum";
+				$pertanyaan[4] = "Sarana Ibadah";
+				$pertanyaan[5] = "Kantin";
+				$pertanyaan[6] = "Lahan Parkir";
+				$pertanyaan[7] = "WC";
+
+
+				$stp[0]=0;$tp[0]=0;$p[0]=2659;$sp[0]=1549;
+				$stp[1]=0;$tp[1]=0;$p[1]=2249;$sp[1]=1959;
+				$stp[2]=0;$tp[2]=0;$p[2]=2104;$sp[2]=2104;
+				$stp[3]=0;$tp[3]=0;$p[3]=2090;$sp[3]=2118;
+				$stp[4]=0;$tp[4]=0;$p[4]=2128;$sp[4]=2080;
+				$stp[5]=0;$tp[5]=0;$p[5]=2232;$sp[5]=1976;
+				$stp[6]=0;$tp[6]=0;$p[6]=2078;$sp[6]=2130;
+				$stp[7]=0;$tp[7]=0;$p[7]=2207;$sp[7]=2001;
+		}
 		break;
 		case 6:
 		$aspek = "Pendidikan";
@@ -347,8 +576,16 @@ if($_GET) {
 										// }
 										$weighted_average = array();
 										$jumlah_weighted_average = 0;
+										$jumlah_stp=0;
+										$jumlah_tp=0;
+										$jumlah_p=0;
+										$jumlah_sp=0;
 										for ($i=0; $i < $jumlah_pertanyaan; $i++) {
 											$j=$i+1;
+											$jumlah_stp=$jumlah_stp+$stp[$i];
+											$jumlah_tp=$jumlah_tp+$tp[$i];
+											$jumlah_p=$jumlah_p+$p[$i];
+											$jumlah_sp=$jumlah_sp+$sp[$i];
 											$jumlah_nilai = $stp[$i]+$tp[$i]+$p[$i]+$sp[$i];
 											$weighted_average[$i] = $stp[$i]*1+$tp[$i]*2+$p[$i]*3+$sp[$i]*4;
 											$weighted_average[$i] = $weighted_average[$i]/($jumlah_nilai*4);
@@ -364,9 +601,14 @@ if($_GET) {
 												<td style=\"text-align:right\">$link</a></td>
 											</tr>";
 										}
+										$total = $jumlah_stp+$jumlah_tp+$jumlah_p+$jumlah_sp;
 										?>
 										<tr>
-											<td colspan="6" >Rerata</td>
+											<td colspan="2" >Presentase</td>
+											<td style="text-align:right"><?php echo round(($jumlah_stp/$total)*100,0);?></td>
+											<td style="text-align:right"><?php echo round(($jumlah_tp/$total)*100,0);?></td>
+											<td style="text-align:right"><?php echo round(($jumlah_p/$total)*100,0);?></td>
+											<td style="text-align:right"><?php echo round(($jumlah_sp/$total)*100,0);?></td>
 											<td style="text-align:right"><?php echo round($jumlah_weighted_average/$jumlah_pertanyaan,0);?></td>
 										</tr>
 									</tbody>
@@ -383,9 +625,12 @@ if($_GET) {
 						</div>
 						<div class="widget-content">
 							<div class="bars" id="bars" style="min-width: 300px; height: 400px; margin: 0 auto"></div>
+							<div id="viewPie" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
 						</div>
 					</div>
 				</div>
+			</div>
 			</div>
 		</div>
 	</form>
@@ -451,6 +696,50 @@ Highcharts.chart('bars', {
 				fontFamily: 'Verdana, sans-serif'
 			}
 		}
+	}]
+});
+
+Highcharts.chart('viewPie', {
+	chart: {
+		plotBackgroundColor: null,
+		plotBorderWidth: null,
+		plotShadow: false,
+		type: 'pie'
+	},
+	title: {
+		text: '<?php //echo $pertanyaan;?>'
+	},
+	tooltip: {
+		pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+	},
+	plotOptions: {
+		pie: {
+			allowPointSelect: true,
+			cursor: 'pointer',
+			dataLabels: {
+				enabled: true,
+				format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+			}
+		}
+	},
+	series: [{
+		name: 'Jawaban',
+		colorByPoint: true,
+		data: [{
+			name: 'Puas',
+			y: <?php echo $jumlah_p;?>,
+			sliced: true,
+			selected: true
+		}, {
+			name: 'Sangat puas',
+			y: <?php echo $jumlah_sp;?>
+		}, {
+			name: 'Tidak puas',
+			y: <?php echo $jumlah_tp;?>
+		}, {
+			name: 'Sangat tidak puas',
+			y: <?php echo $jumlah_stp;?>
+		}]
 	}]
 });
 </script>

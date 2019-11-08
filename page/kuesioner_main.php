@@ -1,5 +1,5 @@
 <?php
-$rerata_kepuasan = array(83,87,81,84,61,84,83,82,87);
+$rerata_kepuasan = array(83,87,81,84,71,84,83,82,87);
 $kriteria = array();
 $kriteria[0] = "Tata Pamong, Tata Kelola, dan Kerjasama";
 $kriteria[1] = "Kemahasiswaan";
@@ -51,7 +51,7 @@ $kriteria[8] = "Lembaga Penjamin Mutu";
 											<td style=\"text-align:right\"><a href=\"?page=Kuesioner-Tahun&id=".$j."\">".$rerata_kepuasan[$i]."</a></td>
 										</tr>";
 									}
-									?>								
+									?>
 									<tr>
 										<td colspan="2">Rata-rata</td>
 										<td style="text-align:right"><strong>80.32</strong></td>
