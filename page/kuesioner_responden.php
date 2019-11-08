@@ -217,6 +217,29 @@ if($_GET) {
 		$aspek = "Lembaga Penjaminan Mutu";
 		$kriteria[0] = "2018/2019 Genap";
 		$rerata_kepuasan[0] = 87;
+
+		$responden[0] = "Mahasiswa";
+		$responden[1] = "Dosen";
+		$responden[2] = "Tenaga Kependidikan";
+		$stp[0] = 0;
+		$tp[0] = 0;
+		$p[0] = 74;
+		$sp[0] = 26;
+
+		$stp[1] = 0;
+		$tp[1] = 1;
+		$p[1] = 59;
+		$sp[1] = 40;
+
+		$stp[2] = 0;
+		$tp[2] = 0;
+		$p[2] = 67;
+		$sp[2] = 33;
+
+		$rerata_kepuasan_responden[0] = 68;
+		$rerata_kepuasan_responden[1] = 75;
+		$rerata_kepuasan_responden[2] = 69;
+
 		break;
 		default:
 		echo "KOSONG";

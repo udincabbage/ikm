@@ -580,6 +580,7 @@ if($_GET) {
 										$jumlah_tp=0;
 										$jumlah_p=0;
 										$jumlah_sp=0;
+
 										for ($i=0; $i < $jumlah_pertanyaan; $i++) {
 											$j=$i+1;
 											$jumlah_stp=$jumlah_stp+$stp[$i];
